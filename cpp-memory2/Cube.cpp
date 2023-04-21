@@ -14,12 +14,12 @@ namespace uiuc {
     std::cout << "Created $" << getVolume() << std::endl;
   }
 
-  Cube::Cube(const Cube & obj) {
+  Cube::Cube(const Cube & obj) { // Not creating a new cube, creating a cube alias, must use a reference when defining a new cube
     length_ = obj.length_;
     std::cout << "Created $" << getVolume() << " via copy" << std::endl;
   }
 
-  Cube & Cube::operator=(const Cube & obj) {
+  Cube & Cube::operator=(const Cube & obj) { // 
     std::cout << "Transformed $" << getVolume() << "-> $" << obj.getVolume() << std::endl;
     length_ = obj.length_;
     return *this;
